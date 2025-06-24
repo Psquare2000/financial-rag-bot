@@ -1,0 +1,19 @@
+# Go
+/go-rag-service/bin/
+/go-rag-service/pkg/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+python-rag-service/vector_store/
+python-rag-service/.venv/
+python-rag-service/.env
+
+# OS
+.DS_Store
+
+# General
+*.log
