@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/Psquare2000/financial-rag-bot/models"
@@ -10,12 +11,13 @@ import (
 )
 
 func HandleQuery(c *gin.Context) {
+	fmt.Println("query_handler.HandleQuery")
 	var req models.QueryRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
 		return
 	}
-
+	fmt.Println("The question is ", req.Question)
 	response, err := service.GetAnswerFromPythonService(req.Question)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Python service failed"})

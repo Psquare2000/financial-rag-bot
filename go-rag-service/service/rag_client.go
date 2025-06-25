@@ -15,10 +15,11 @@ func GetAnswerFromPythonService(question string) (*models.QueryResponse, error) 
 	resp, err := client.R().
 		SetBody(map[string]string{"question": question}).
 		SetResult(&response).
-		Post("http://localhost:5000/generate-answer") // Python microservice URL
+		Post("http://localhost:8000/query") // Python microservice URL
 
 	if err != nil || resp.IsError() {
-		return nil, fmt.Errorf("Failed to contact Python service")
+		println("this is the error :", err)
+		return nil, fmt.Errorf("failed to contact python service")
 	}
 
 	return &response, nil

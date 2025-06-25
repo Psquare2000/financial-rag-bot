@@ -35,29 +35,3 @@ results = collection.query(
 # Show the relevant documents
 for i, doc in enumerate(results['documents'][0]):
     print(f"\n🔍 Match #{i+1}:\n{doc}")
-
-
-def get_answer(question):
-    # Embed the user query
-    query_embedding = embed([question])[0]
-
-    # Search ChromaDB
-    results = collection.query(
-        query_embeddings=[query_embedding],
-        n_results=3
-    )
-
-    # Concatenate documents
-    context = "\n".join(results["documents"][0])
-
-    # Call OpenAI with context + question
-    response = openai_client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "system", "content": "You are a financial assistant."},
-            {"role": "user", "content": f"Use the context below to answer:\n\n{context}\n\nQ: {question}"}
-        ]
-    )
-
-    return response.choices[0].message.content
-
