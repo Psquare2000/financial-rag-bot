@@ -1,15 +1,22 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
+import nltk
 from models import QueryRequest, QueryResponse
 from rag_pipeline import get_answer, load_and_store_documents
 import time
+from nltk.tokenize import sent_tokenize
+from nltk.data import find
+
+nltk.download('punkt_tab')
+nltk.download('punkt')
 
 app = FastAPI()
 
-@app.post("/generate-answer", response_model=QueryResponse)
-def generate_answer(req: QueryRequest):
-    print("Received question:", req.question)
-    return QueryResponse(answer="This is a dummy response for: " + req.question)
+# @app.post("/generate-answer", response_model=QueryResponse)
+# def generate_answer(req: QueryRequest):
+#     print("Received question:", req.question)
+#     return QueryResponse(answer="This is a dummy response for: " + req.question)
+
 
 @app.post("/query", response_model=QueryResponse)
 async def query_api(req: Request):
@@ -24,7 +31,7 @@ async def query_api(req: Request):
     print("📨 User question:", user_question)
 
     answer_start = time.time()
-    answer = get_answer(user_question)
+    answer = await get_answer(user_question)  # <- ✅ Await the async function
     answer_end = time.time()
     print("🔵 get_answer() took", round(answer_end - answer_start, 2), "seconds")
 
@@ -33,8 +40,9 @@ async def query_api(req: Request):
 
     return {"answer": answer}
 
-@app.post("/load-data")
-def load_data():
-    load_and_store_documents()
+
+@app.post("/load")
+async def load_data():
+    await load_and_store_documents()
     return {"status": "✅ Documents embedded"}
 

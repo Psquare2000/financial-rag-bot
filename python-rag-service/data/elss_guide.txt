@@ -1,1 +1,26 @@
 Equity Linked Savings Schemes (ELSS) are mutual fund investments that offer tax benefits under section 80C of the Income Tax Act. These schemes have a lock-in period of 3 years and are primarily invested in equities.
+Equity Linked Savings Schemes, or ELSS, are mutual fund products that offer investors the dual benefit of capital appreciation and tax savings. These schemes primarily invest in equity markets and come with a mandatory three-year lock-in period. Unlike other tax-saving instruments like Public Provident Fund or National Savings Certificate, ELSS has the shortest lock-in and offers market-linked returns.
+
+Investments made under ELSS are eligible for a deduction of up to ₹1.5 lakh under Section 80C of the Income Tax Act. However, since these funds invest predominantly in equities, returns are not guaranteed and are subject to market volatility. Still, over the long term, ELSS funds have shown the potential to outperform traditional tax-saving options.
+
+Investors can choose to invest in ELSS either through a lump sum or via a Systematic Investment Plan (SIP). Each SIP installment is treated as a separate investment and will have its own lock-in period of three years. For example, if you invest monthly through SIP, the units purchased each month will be locked in independently.
+
+The Net Asset Value (NAV) of an ELSS fund is declared at the end of every trading day. It represents the per-unit market value of the fund and changes based on the performance of the underlying assets. When investors purchase ELSS units, they do so at the prevailing NAV.
+
+While ELSS funds enjoy EEE (Exempt-Exempt-Exempt) tax status, capital gains above ₹1 lakh in a financial year are taxed at 10%. Dividends received from ELSS funds, if any, are also taxable in the hands of investors as per the applicable income tax slab.
+
+Rupee cost averaging, enabled through SIPs, allows investors to accumulate more units when the market is low and fewer when the market is high. This smooths out the average cost per unit over time and helps reduce the impact of market volatility.
+
+ELSS funds are suitable for individuals with a moderate to high risk appetite and a long-term investment horizon. Since they are market-linked, it is advised to stay invested beyond the lock-in period to maximize the benefits of compounding and equity growth.
+
+The Public Provident Fund (PPF) is a government-backed long-term savings scheme in India that offers attractive interest rates and tax benefits. It was introduced in 1968 with the objective of mobilizing small savings by offering an investment avenue with reasonable returns combined with income tax benefits.
+
+A PPF account can be opened at designated post offices and banks. The scheme has a lock-in period of 15 years, making it suitable for long-term goals like retirement or children’s education. Partial withdrawals are allowed after the 7th year, and loans can be availed against the balance from the 3rd year.
+
+PPF currently offers an interest rate of around 7% per annum, compounded annually. The interest rate is set by the Ministry of Finance every quarter and is completely tax-free. Contributions up to ₹1.5 lakh per annum are eligible for deduction under Section 80C of the Income Tax Act.
+
+One of the key advantages of PPF is its EEE (Exempt-Exempt-Exempt) status — meaning the amount invested, the interest earned, and the maturity amount are all exempt from tax. This makes it one of the most tax-efficient investment options available to Indian residents.
+
+The minimum annual deposit required is ₹500, while the maximum that can be deposited in a financial year is ₹1.5 lakh. Deposits can be made in lump sum or in installments, and missed deposits can be made up with a penalty and arrears.
+
+PPF is considered a very low-risk instrument, as it is backed by the Government of India. It is ideal for conservative investors looking for safety of capital and steady returns over a long period of time.
