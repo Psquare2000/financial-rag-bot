@@ -53,7 +53,10 @@ def smart_chunk(text, max_sentences=5, overlap=2):
         chunk = sentences[i:i+max_sentences]
         chunks.append(" ".join(chunk))
         i += max_sentences - overlap
+    for i, chunk in enumerate(chunks):
+        print(f"\n--- Chunk {i} ---\n{chunk}")
     return chunks
+
 
 
 async def load_and_store_documents():
