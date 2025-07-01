@@ -11,7 +11,7 @@ const Chat = () => {
     setMessages((prev) => [...prev, userMessage]);
 
     try {
-      const response = await fetch("http://localhost:8000/query", {
+      const response = await fetch("http://localhost:8088/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

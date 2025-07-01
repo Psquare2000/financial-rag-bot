@@ -9,12 +9,25 @@ function ChatWindow() {
 
   const messagesEndRef = useRef(null);
 
-  const handleSend = (text) => {
+  const handleSend = async (text) => {
     setMessages((prev) => [...prev, { text, sender: 'user' }]);
-    setTimeout(() => {
-      setMessages((prev) => [...prev, { text: 'This is a dummy bot response.', sender: 'bot' }]);
-    }, 500);
+  
+    try {
+      const res = await fetch('http://localhost:8088/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: text })
+      });
+  
+      const data = await res.json();
+      setMessages((prev) => [...prev, { text: data.answer, sender: 'bot' }]);
+    } catch (error) {
+      console.error('Error:', error);
+      setMessages((prev) => [...prev, { text: 'Bot is currently unavailable.', sender: 'bot' }]);
+    }
   };
+  
+  
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });

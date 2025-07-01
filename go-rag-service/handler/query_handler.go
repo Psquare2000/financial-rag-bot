@@ -13,10 +13,14 @@ import (
 func HandleQuery(c *gin.Context) {
 	fmt.Println("query_handler.HandleQuery")
 	var req models.QueryRequest
+	fmt.Println("Received request at /query")
+
 	if err := c.ShouldBindJSON(&req); err != nil {
+		fmt.Println("Failed to bind JSON:", err)
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
 		return
 	}
+	fmt.Println("The question is:", req.Question)
 	fmt.Println("The question is ", req.Question)
 	response, err := service.GetAnswerFromPythonService(req.Question)
 	if err != nil {
